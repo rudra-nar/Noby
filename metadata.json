@@ -1,0 +1,6 @@
+{
+  "name": "noby Premium Toy Store",
+  "description": "A sleek, business-professional collector showcase and shopping platform for high-end Hot Wheels and diecast cars by noby, featuring Indian currency and premium minimalist design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
