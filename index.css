@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom fire/race animations */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  @keyframes slide-stripes {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 40px 0;
+    }
+  }
+}
+
+/* Custom utility styles */
+.pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.race-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #ff5e00,
+    #ff5e00 10px,
+    #ff2200 10px,
+    #ff2200 20px
+  );
+  background-size: 40px 40px;
+  animation: slide-stripes 1s linear infinite;
+}
+
+.black-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #111,
+    #111 10px,
+    #222 10px,
+    #222 20px
+  );
+}
+
+/* Custom scrollbar for premium theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5e00;
+}
+
